@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оценка стоимости услуг | ООО "Комп Сити"</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-inner">
+                <div class="logo">
+                    <i class="fas fa-laptop-code"></i>
+                    <span>ООО "Комп Сити"</span>
+                </div>
+                <nav class="nav">
+                    <a href="#calculator" class="nav-link active">Калькулятор</a>
+                    <a href="#services" class="nav-link">Услуги</a>
+                    <a href="#contacts" class="nav-link">Контакты</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1 class="hero-title">Оценка стоимости IT-услуг</h1>
+                <p class="hero-subtitle">Рассчитайте стоимость услуг прямо сейчас</p>
+                <a href="#calculator" class="btn btn-primary">
+                    <i class="fas fa-calculator"></i> Калькулятор
+                </a>
+            </div>
+        </section>
+
+        <section id="calculator" class="calculator-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Калькулятор стоимости</h2>
+                </div>
+                
+                <form class="calculator-form" id="calcForm">
+                    <div class="form-group">
+                        <label for="serviceType">
+                            <i class="fas fa-tools"></i> Тип услуги
+                        </label>
+                        <select id="serviceType" required>
+                            <option value="">Выберите услугу...</option>
+                            <option value="repair">Ремонт оборудования</option>
+                            <option value="network">Диагностика</option>
+                            <option value="support">Настройка</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label><i class="fas fa-clock"></i> Срочность</label>
+                        <div class="radio-cards">
+                            <label class="radio-card">
+                                <input type="radio" name="urgency" value="standard" checked>
+                                <div class="card-content">
+                                    <h4>Стандартная</h4>
+                                    <p>3-5 рабочих дней</p>
+                                    <span class="price-badge">Без наценки</span>
+                                </div>
+                            </label>
+                            
+                            <label class="radio-card">
+                                <input type="radio" name="urgency" value="urgent">
+                                <div class="card-content">
+                                    <h4>Срочная</h4>
+                                    <p>24 часа</p>
+                                    <span class="price-badge">+20%</span>
+                                </div>
+                            </label>
+                            
+                            <label class="radio-card">
+                                <input type="radio" name="urgency" value="express">
+                                <div class="card-content">
+                                    <h4>Экспресс</h4>
+                                    <p>4-8 часов</p>
+                                    <span class="price-badge">+35%</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label><i class="fas fa-plus-circle"></i> Дополнительно</label>
+                        <div class="checkbox-cards">
+                            <label class="checkbox-card">
+                                <input type="checkbox" name="extras" value="backup">
+                                <div class="card-content">
+                                    <h4>Резервное копирование</h4>
+                                    <span class="price-badge">+2000₽</span>
+                                </div>
+                            </label>
+                            
+                            <label class="checkbox-card">
+                                <input type="checkbox" name="extras" value="diagnostics">
+                                <div class="card-content">
+                                    <h4>Полная диагностика</h4>
+                                    <span class="price-badge">+3000₽</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block">
+                        <i class="fas fa-calculator"></i> Рассчитать стоимость
+                    </button>
+                </form>
+
+                <div class="calculator-result" id="resultSection" style="display: none;">
+                    <div class="result-header">
+                        <h3>Предварительный расчет</h3>
+                    </div>
+                    <div class="result-content" id="resultContent">
+                    </div>
+                    <button class="btn btn-outline btn-block" id="requestBtn">
+                        <i class="fas fa-paper-plane"></i> Оставить заявку
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="services-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Наши услуги</h2>
+                </div>
+                
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h3>Ремонт оборудования</h3>
+                        <p>Профессиональный ремонт компьютеров, ноутбуков и принтеров</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <h3>Настройка сети</h3>
+                        <p>Развертывание и настройка корпоративных сетей</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h3>Диагностика оборудования</h3>
+                        <p>Комплексное обслуживание перефирии</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacts" class="contacts-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Контакты</h2>
+                </div>
+                
+                <div class="contacts-grid">
+                    <div class="contacts-info">
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Адрес</h4>
+                                <p>г. Щёлково, мкр. Богородский</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <h4>Телефон</h4>
+                                <p>+7 (964) 564-15-19</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>StepanLomakin3319/2.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contacts-form">
+                        <form id="contactForm">
+                            <h3>Оставьте заявку</h3>
+                            <div class="form-group">
+                                <input type="text" placeholder="Ваше имя" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" placeholder="Телефон" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea placeholder="Сообщение" rows="4"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-paper-plane"></i> Отправить
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-laptop-code"></i>
+                    <span>ООО "Комп Сити"</span>
+                </div>
+                <div class="footer-copyright">
+                    &copy; 2024 ООО "Комп-сити"
+                </div>
+                <div class="footer-links">
+                    <a href="#">Техническая поддержка</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
